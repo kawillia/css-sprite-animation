@@ -1,0 +1,55 @@
+html, body, h1, img, input
+{
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+html
+{
+    scrollbar-arrow-color: transparent;
+    scrollbar-darkshadow-color: transparent;
+    scrollbar-face-color: transparent;
+    scrollbar-highlight-color: transparent;
+    scrollbar-shadow-color: transparent;
+    scrollbar-track-color: transparent;
+    scrollbar-3dlight-color: transparent;
+}
+
+body
+{
+    background-color: White;
+    background-clip: initial;
+    background-image: url('../images/stylish-background.jpg');
+    background-origin: initial;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    font: .75em Georgia, Times, serif;
+    padding: 20px;
+}
+
+#runningDude {
+    width: 240px; 
+    height: 296px; 
+    background-image: url(../images/walk-sequence.png); 
+    -webkit-animation: playv 1s steps(5) infinite, playh 0.2s steps(6) infinite, movearound 5s infinite steps(1000,start);
+    animation: playv 1s steps(5) infinite, playh 0.2s steps(6) infinite, movearound 5s infinite steps(1000,start);
+} 
+
+@-webkit-keyframes playv {
+     0% { background-position-y:   0px; }
+   100% { background-position-y: -1480px; }
+}
+
+@-webkit-keyframes playh {
+     0% { background-position-x:   0px; }
+   100% { background-position-x: -1440px; }
+}
+
+@-webkit-keyframes movearound { 0% { -webkit-transform: translatex(-100px);} 100% { -webkit-transform: translatex(1500px); } } 
+@keyframes movearound { 0% { transform: translatex(-100px); } 100% {transform: translatex(1500px); } }
